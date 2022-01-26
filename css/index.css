@@ -1,0 +1,32 @@
+body {
+  background: #f2bc62;
+}
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+.list-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.product-image {
+  height: 300px;
+}
+.detail-image {
+  height: 150px;
+}
+.card h5 {
+  vertical-align: middle;
+}
+.card h5 .badge {
+  vertical-align: middle;
+  margin-top: -0.4em;
+}
+.modal textarea {
+  resize: none;
+  height: 120px;
+}
+
+
+  
