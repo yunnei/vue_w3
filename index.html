@@ -24,7 +24,7 @@
                       <th width="30%" class="text-start">產品名稱</th>
                       <th class="text-end">原價</th>
                       <th class="text-end">售價</th>
-                      <th width="26%" class="text-center" class="text-center">是否啟用</th>
+                      <th width="26%" class="text-center">是否啟用</th>
                       <th class="text-center">編輯</th>
                     </tr>
                   </thead>
@@ -75,15 +75,15 @@
                     </div>
                     <h3>多圖新增</h3>
                     <div class="mb-2">
-                      <div v-if="Array.isArray(productTemp.imagesUrl)">
-                        <div v-for="(image, index) in productTemp.imagesUrl" :key="index">
+                      <template v-if="Array.isArray(productTemp.imagesUrl)">
+                        <template v-for="(image, index) in productTemp.imagesUrl" :key="index">
                           <div class="input-group mb-2">
                             <input v-model="productTemp.imagesUrl[index]" type="text" id="imagesUrl" class="form-control" placeholder="請輸入圖片連結">
                             <button type="button" class="btn btn-outline-danger" @click="productTemp.imagesUrl.splice(index, 1)">刪除</button>
                           </div>
                           <img class="mb-3" :src="image">
-                        </div>                        
-                      </div>
+                        </template>                        
+                      </template>
                     </div>
                     <div>
                       <button type="button" class="btn btn-outline-primary w-100" @click="createImages">+ 新增圖片</button>
